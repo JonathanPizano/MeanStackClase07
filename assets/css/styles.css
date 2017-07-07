@@ -1,0 +1,15 @@
+body{
+    background: #eff;
+}
+
+.borderYellow{
+    border: 5px solid yellow
+}
+
+.borderRed{
+    border: 5px solid red;
+}
+
+.borderBlue{
+    border: 5px solid blue;
+}

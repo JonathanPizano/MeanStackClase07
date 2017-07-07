@@ -1,0 +1,17 @@
+<div class ="container">
+    <div class="row">
+        <a type="button"
+            class="btn btn-lg btn-primary"
+            [routerLink]="['/']"
+        >
+        Regresar
+        </a>
+    </div>
+</div>
+
+<div class="container" *ngIf="auto">
+    <h1>{{auto.marca}}</h1>
+    <h2>{{auto.modelo}}</h2>
+    <h3>{{auto.anio}}</h3>
+    <h4>{{auto.version}}</h4>
+</div>

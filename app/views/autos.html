@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="page-header">
+        <h1>{{titulo}}</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <a type="button"
+            class="btn btn-lg btn-primary"
+            [routerLink]="['/crear-auto']"
+            >
+            Agregar un auto
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ul class="list-group">
+            <li *ngFor="let auto of autos" class="list-group-item">
+                <h4>{{auto.marca}} {{auto.modelo}} {{auto.anio}}</h4>
+                <a [routerLink]="['/auto', auto._id]" type="button" class="btn btn-primary">Ver</a>
+                <a [routerLink]="['/modificar-auto', auto._id]" type="button" class="btn btn-warning">Modificar</a>
+                <a (click)="onBorrarConfirmacion(auto._id)" type="button" class="btn btn-danger">Eliminar</a>
+            </li>
+        </ul>
+    </div>
+</div>

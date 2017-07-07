@@ -1,0 +1,45 @@
+<div class ="container">
+    <div class="row">
+        <a type="button"
+            class="btn btn-lg btn-primary"
+            [routerLink]="['/']"
+        >
+        Regresar
+        </a>
+    </div>
+</div>
+
+<h1>{{title}}</h1>
+
+<div class="container">
+    <form #formAuto="ngForm" (ngSubmit)="onSubmit()">
+        <label>Marca:</label>
+        <p>
+            <input 
+                type="text"
+                name="marca"
+                #marca="ngModel"
+                [(ngModel)]="auto.marca"
+                required/>
+        </p>
+        <label>Modelo:</label>
+        <p>
+            <input 
+                type="text"
+                name="modelo"
+                #modelo="ngModel"
+                [(ngModel)]="auto.modelo"
+                required/>
+        </p>
+        <label>Version:</label>
+        <p>
+            <input 
+                type="text"
+                name="version"
+                #modelo="ngModel"
+                [(ngModel)]="auto.version"
+                required/>
+        </p>
+        <input type="submit" value="{{title}}">
+    </form>
+</div>
